@@ -72,12 +72,27 @@ self.addEventListener('message', event => {
   } else if (event.data?.type === 'QUERY_CACHE_STATUS') {
     // 查询当前缓存状态
     getCurrentCacheStatus().then(status => {
-      event.ports[0].postMessage({
-        type: 'CACHE_STATUS_RESPONSE',
-        cached: status.cached,
-        total: status.total,
-        complete: status.complete
-      });
+      // 修复：安全地处理 ports
+      if (event.ports && event.ports.length > 0) {
+        event.ports[0].postMessage({
+          type: 'CACHE_STATUS_RESPONSE',
+          cached: status.cached,
+          total: status.total,
+          complete: status.complete
+        });
+      } else {
+        // 如果没有 port，直接发送给所有客户端（备选方案）
+        self.clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'CACHE_STATUS_RESPONSE',
+              cached: status.cached,
+              total: status.total,
+              complete: status.complete
+            });
+          });
+        });
+      }
     });
   }
 });

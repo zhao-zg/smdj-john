@@ -1,0 +1,11 @@
+/* fonts.css (默认不引入自定义字体)
+如需字体:
+@font-face {
+  font-family: "MySubset";
+  src: url("/fonts/MySubset.woff2") format("woff2");
+  font-display: swap;
+}
+html[data-font="sans"] {
+  --font-base: "MySubset",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,"Helvetica Neue",Arial,"Microsoft YaHei","Noto Sans CJK SC",sans-serif;
+}
+*/

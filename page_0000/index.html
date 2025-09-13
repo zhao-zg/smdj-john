@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto" data-font="sans">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>第 1 页</title>
+<link rel="manifest" href="../manifest.webmanifest" />
+<meta name="theme-color" content="#3366ff" />
+<link rel="stylesheet" href="../assets/css/core.css" />
+<link rel="stylesheet" href="../assets/css/themes.css" />
+<link rel="stylesheet" href="../assets/css/extra.css" />
+<link rel="stylesheet" href="../assets/css/fonts.css" />
+<link rel="prefetch" href="../page_0001/" as="document">
+</head>
+<body>
+<header class="app-bar">
+  <nav class="nav">
+    <div class="nav-buttons">
+      <a class="nav-btn disabled" data-nav="prev" aria-hidden="true">←</a>
+      <a class="nav-btn" href="../index.html">目录</a>
+      <a class="nav-btn today-link" href="#" data-start-date="2025-09-10" data-start-index="4" data-total="182">今日</a>
+      <a class="nav-btn" data-nav="next" href="../page_0001/">→</a>
+    </div>
+    <div class="nav-settings"><button class="nav-btn small" id="open-settings" title="设置">⚙️</button></div>
+  </nav>
+  <div class="top-progress" id="top-progress"></div>
+</header>
+<div class="app-bar-spacer" aria-hidden="true"></div>
+<aside class="settings-panel" id="settings-panel" aria-hidden="true">
+  <div class="settings-inner">
+    <h2>阅读设置</h2>
+    <div class="setting">
+      <label for="font-size-range">字号 <span id="font-size-label"></span></label>
+      <input type="range" id="font-size-range" min="15" max="24" value="18" />
+    </div>
+    <div class="setting">
+      <label for="line-height-range">行距 <span id="line-height-label"></span></label>
+      <input type="range" id="line-height-range" min="1.3" max="2.1" step="0.05" value="1.65" />
+    </div>
+    <div class="setting">
+      <label>字体</label>
+      <div class="chips" id="font-family-choices">
+        <button data-font="sans" class="chip active">Sans</button>
+        <button data-font="serif" class="chip">Serif</button>
+        <button data-font="dyslexic" class="chip">Dyslexic</button>
+      </div>
+    </div>
+    <div class="setting">
+      <label>主题</label>
+      <div class="chips" id="theme-choices">
+        <button data-theme="auto" class="chip active">Auto</button>
+        <button data-theme="light" class="chip">Light</button>
+        <button data-theme="dark" class="chip">Dark</button>
+      </div>
+    </div>
+    <div class="setting">
+      <label>朗读</label>
+      <div class="chips" id="tts-toggle-chips">
+        <button data-tts="show" class="chip">开启朗读</button>
+        <button data-tts="hide" class="chip active">隐藏朗读</button>
+      </div>
+    </div>
+    <div class="setting">
+      <label>应用</label>
+      <div class="chips"><button id="install-app-btn" class="chip" style="display:none;">安装应用</button></div>
+    </div>
+    <button id="close-settings" class="close-btn">完成</button>
+  </div>
+</aside>
+<main id="reader-content" class="page-view" data-page-index="0" data-presegment="true">
+<div id="cover-image"><img src="../images/cover-image.png" loading="lazy" alt="cover-image, 约翰研读（富）" title="约翰研读（富）"/></div>
+</main>
+<div class="tts-dock" id="tts-dock" data-visible="false">
+  <div class="tts-dock-main">
+    <button class="dock-btn" id="tts-btn-prev" title="上一句">⏮️</button>
+    <button class="dock-btn play" id="tts-btn-play" title="播放 / 暂停">▶️</button>
+    <button class="dock-btn" id="tts-btn-next" title="下一句">⏭️</button>
+    <button class="dock-btn" id="tts-btn-stop" title="停止">■</button>
+    <button class="dock-btn" id="tts-btn-mode" title="连续/单页">🔂</button>
+    <button class="dock-btn small" id="tts-btn-close" title="隐藏朗读">✕</button>
+  </div>
+  <div class="tts-progress-row">
+    <div class="tts-progress-bar" id="tts-progress-bar">
+      <div class="tts-progress-fill" id="tts-progress-fill"></div>
+      <div class="tts-progress-handle" id="tts-progress-handle"></div>
+    </div>
+    <div class="tts-progress-text" id="tts-progress-text">0 / 0</div>
+  </div>
+</div>
+<button id="back-top" class="fab-top" aria-label="回到顶部">↑</button>
+<script>
+window.PAGE_INFO={current:0,total:182,prevPage:null,nextPage:"../page_0001/"};
+</script>
+<script src="../assets/js/tts.js" defer></script>
+<script src="../assets/js/reader.js" defer></script>
+<script src="../assets/js/sw-register.js" defer></script>
+</body>
+</html>

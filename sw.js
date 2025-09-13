@@ -15,11 +15,11 @@ const CORE_ASSETS = [
   './assets/js/sw-register.js'
 ];
 
-const PAGE_LIST = ["page_0000/", "page_0001/", "page_0002/", "page_0003/", "page_0004/", "page_0005/", "page_0006/", "page_0007/", "page_0008/", "page_0009/", "page_0010/", "page_0011/", "page_0012/", "page_0013/", "page_0014/", "page_001极速版/", "page_0016/", "page_0017/", "page_0018/", "page_0019/", "page_0020/", "page_0021/", "page_0022/", "page_0023/", "极速版/", "page_0025/", "page_0026/", "page_0027/", "page_0028/", "page_0029/", "page_0030/", "page_0031/", "page_0032/", "page_0033/", "page_0034/", "page_0035/", "page_0036/", "page_0037/", "page_0038/", "page_0039/", "page_0040/", "page_0041/", "page_0042/", "page_0043/", "page_0044/", "page_0045/", "page_0046/", "page_0047/", "page_0048/", "page极速版/", "page_0050/", "page_0051/", "page_0052/", "page_0053/", "page_0054/", "page_0055/", "page_0056/", "page_0057/", "page_0058/", "page_0059/", "page_0060/", "page_0061/", "page_0062/", "page_0063/", "page_0064/", "page_0065/", "page_0066/", "page_0067/", "page_0068/", "page_0069/", "page_0070/", "page_0071/", "page_0072/", "page_0073/", "page_0074/", "page_0075/", "page_0076/", "page_0077/", "page_0078/", "page_0079/", "page_0080/", "page_0081/", "page_0082/", "page_0083/", "page_0084/", "page_0085/", "page_0086/", "page_0087/", "page_0088/", "page_0089/", "page_0090/", "page_0091/", "page_0092/", "page_0093/", "page_0094/", "page_0095/", "page_0096/", "page_0097/", "page_0098/", "page_0099/", "page_0100/", "page_0101/", "page_0102/", "page_0103/", "page_极速版/", "page_0105/", "极速版/", "page_0107/", "page_0108/", "page_0109/", "page_0110/", "page_0111/", "page_0112/", "page_0113/", "page_0114/", "page_0115/", "page_0116/", "page_0117/", "page_0118/", "page_0119/", "page_0120/", "page_0121/", "page_0122/", "page_0123/", "page_0124/", "page_0125/", "page_0126/", "page_0127/", "page_0128/", "page_0129/", "page_0130/", "page_0131/", "page_0132/", "page_0133/", "page_0134/", "page_0135/", "page_0136/", "page_0137/", "page_0138/", "page_0139/", "page_0140/", "page_0141/", "page_0142/", "page_0143/", "page_0144/", "page_0145/", "page_0146/", "page_0147/", "page_0148/", "page_0149/", "page_0150/", "page_0151/", "page_0152/", "page_0153/", "page_0154/", "page_0155/", "page极速版/", "page_0157/", "page_0158/", "page_0159/", "page_0160/", "page极速版/", "page_0162/", "page_0163/", "page_0164/", "page_0165/", "page_0166/", "page_0167/", "page_0168/", "page_0169/", "page_0170/", "page_0171/", "page_0172/", "page_0173/", "page_0174/", "page_0175/", "page_0176/", "page_0177/", "page_0178/", "page_0179/", "page_0180/", "page_0181/"];
+const PAGE_LIST = ["page_0000/", "page_0001/", "page_0002/", "page_0003/", "page_0004/", "page_0005/", "page_0006/", "page_0007/", "page_0008/", "page_0009/", "page_0010/", "page_0011/", "page_0012/", "page_0013/", "page_0014/", "page_0015/", "page_0016/", "page_0017/", "page_0018/", "page_0019/", "page_0020/", "page_0021/", "page_0022/", "page_0023/", "page_0024/", "page_0025/", "page_0026/", "page_0027/", "page_0028/", "page_0029/", "page_0030/", "page_0031/", "page_0032/", "page_0033/", "page_0034/", "page_0035/", "page_0036/", "page_0037/", "page_0038/", "page_0039/", "page_0040/", "page_0041/", "page_0042/", "page_0043/", "page_0044/", "page_0045/", "page_0046/", "page_0047/", "page_0048/", "page_0049/", "page_0050/", "page_0051/", "page_0052/", "page_0053/", "page_0054/", "page_0055/", "page_0056/", "page_0057/", "page_0058/", "page_0059/", "page_0060/", "page_0061/", "page_0062/", "page_0063/", "page_0064/", "page_0065/", "page_0066/", "page_0067/", "page_0068/", "page_0069/", "page_0070/", "page_0071/", "page_0072/", "page_0073/", "page_0074/", "page_0075/", "page_0076/", "page_0077/", "page_0078/", "page_0079/", "page_0080/", "page_0081/", "page_0082/", "page_0083/", "page_0084/", "page_0085/", "page_0086/", "page_0087/", "page_0088/", "page_0089/", "page_0090/", "page_0091/", "page_0092/", "page_0093/", "page_0094/", "page_0095/", "page_0096/", "page_0097/", "page_0098/", "page_0099/", "page_0100/", "page_0101/", "page_0102/", "page_0103/", "page_0104/", "page_0105/", "page_0106/", "page_0107/", "page_0108/", "page_0109/", "page_0110/", "page_0111/", "page_0112/", "page_0113/", "page_0114/", "page_0115/", "page_0116/", "page_0117/", "page_0118/", "page_0119/", "page_0120/", "page_0121/", "page_0122/", "page_0123/", "page_0124/", "page_0125/", "page_0126/", "page_0127/", "page_0128/", "page_0129/", "page_0130/", "page_0131/", "page_0132/", "page_0133/", "page_0134/", "page_0135/", "page_0136/", "page_0137/", "page_0138/", "page_0139/", "page_0140/", "page_0141/", "page_0142/", "page_0143/", "page_0144/", "page_0145/", "page_0146/", "page_0147/", "page_0148/", "page_0149/", "page_0150/", "page_0151/", "page_0152/", "page_0153/", "page_0154/", "page_0155/", "page_0156/", "page_0157/", "page_0158/", "page_0159/", "page_0160/", "page_0161/", "page_0162/", "page_0163/", "page_0164/", "page_0165/", "page_0166/", "page_0167/", "page_0168/", "page_0169/", "page_0170/", "page_0171/", "page_0172/", "page_0173/", "page_0174/", "page_0175/", "page_0176/", "page_0177/", "page_0178/", "page_0179/", "page_0180/", "page_0181/"];
 
 // 配置
 const BATCH_SIZE = 20;
-const BATCH_DELAY = 1000;
+const BATCH_DELAY = 500;
 
 /** 路径归一化，保证 page_xxxx 和 page_xxxx/index.html 命中同一缓存 */
 function normalizePagePath(pathname) {
@@ -73,7 +73,7 @@ self.addEventListener('message', event => {
     // 查询当前缓存状态
     getCurrentCacheStatus().then(status => {
       event.ports[0].postMessage({
-        type: '极速版',
+        type: 'CACHE_STATUS_RESPONSE',
         cached: status.cached,
         total: status.total,
         complete: status.complete
@@ -116,19 +116,6 @@ async function cacheAllPages() {
   const cache = await caches.open(CACHE_NAME);
   let cached = 0;
   const total = PAGE_LIST.length;
-
-  // 先确保核心资源已缓存
-  for (const asset of CORE_ASSETS) {
-    try {
-      const res = await fetch(asset);
-      if (res.ok) {
-        await cache.put(asset, res.clone());
-        cached++;
-      }
-    } catch (e) {
-      console.warn('[SW] Failed to cache asset:', asset, e);
-    }
-  }
 
   for (let i = 0; i < PAGE_LIST.length; i += BATCH_SIZE) {
     const batch = PAGE_LIST.slice(i, i + BATCH_SIZE);
